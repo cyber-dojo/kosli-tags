@@ -65,7 +65,7 @@ jobs:
             --set repo_url=https://github.com/cyber-dojo/runner
           
           kosli tag flow saver-ci \
-            --set kind=microservice
+            --set kind=microservice \
             --set ci=github \
             --set repo_url=https://github.com/cyber-dojo/saver
           
@@ -75,6 +75,6 @@ jobs:
             --set repo_url=https://github.com/cyber-dojo/web
           
           kosli tag flow creator-ci \
-            --set kind=microservice
+            --set kind=microservice \
             --set ci=gitlab \
             --set repo_url=https://gitlab.com/cyber-dojo/creator
