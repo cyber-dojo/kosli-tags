@@ -30,51 +30,51 @@ jobs:
       - name: Tag Kosli Flows
         run: |
           kosli tag flow custom-start-points-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/custom-start-points
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/custom-start-points"
           
           kosli tag flow dashboard-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/dashboard
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/dashboard"
           
           kosli tag flow differ-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/differ
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/differ"
           
           kosli tag flow exercises-start-points-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/exercises-start-points
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/exercises-start-points"
           
           kosli tag flow languages-start-points-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/languages-start-points
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/languages-start-points"
           
           kosli tag flow nginx-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/nginx
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/nginx"
           
           kosli tag flow runner-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/runner
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/runner"
           
           kosli tag flow saver-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/saver
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/saver"
           
           kosli tag flow web-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=github \
-            --set repo_url=https://github.com/cyber-dojo/web
+            --set repo_url="${{ github.server_url }}/${{ github.repository_owner }}/web"
           
           kosli tag flow creator-ci \
-            --set kind=microservice \
+            --set kind=build \
             --set ci=gitlab \
             --set repo_url=https://gitlab.com/cyber-dojo/creator
